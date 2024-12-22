@@ -40,3 +40,10 @@ function generarRandom(min, max) {
         modal.show(); // Muestra el modal
     });
 });
+
+document.getElementById("yesButton").addEventListener("click", () => {
+    const audio = document.getElementById("audioPlayer");
+    audio.play().catch((error) => {
+        console.error("Error al reproducir el audio:", error);
+    });
+});

@@ -65,7 +65,7 @@ h1 {
     height: auto;
     margin-top: -10px;
     position: absolute;
-    bottom: 190px;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
 }
