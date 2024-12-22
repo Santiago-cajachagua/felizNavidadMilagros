@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estas Lista</title>
+    <link rel="stylesheet" href="lista.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Carter+One&family=Luckiest+Guy&family=Oleo+Script&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+  
+<body>
+    <!-- Agregar el elemento de audio para reproducir el archivo -->
+    <audio id="audioPlayer" autoplay loop>
+        <source src="police.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div id="contenedor">
+        <!-- Primer contenedor con el mensaje inicial -->
+        <h1 id="mensaje"></h1>
+    </div>
+
+    <!-- Segundo contenedor (inicialmente oculto) -->
+    <div id="contenedor2" style="display: none;">
+        <h2 id="mensaje2">Para continuar responde esta pregunta</h2>
+    </div>
+
+    <!-- Contenedor para el mensaje3 -->
+    <div id="contenedor3" style="display: none;">
+        <h2 id="mensaje3">¿Te gustaria compartir momentos increíbles conmigo?</h2>
+    </div>
+
+    <!-- Tercer contenedor con los botones -->
+    <div id="contenedor4" style="display: none;">
+        <button id="siButton" class="btn btn-danger me-2">Si ❤️</button>
+        <button id="noButton" class="btn btn-dark">No ❌</button>
+    </div>
+
+    <div id="contadorContainer" style="display: none;">
+        <div class="cuenta-regresiva">
+            10
+        </div>
+        <div class="borde-giratorio"></div>
+
+    <script src="lista.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo");
+
+:root {
+  font-family: "Aleo", sans-serif;
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: rgb(119, 13, 13);
+  background: radial-gradient(
+    circle,
+    rgba(119, 13, 13, 0.92) 64%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  font-size: 2.2rem;
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: moveBg 30s linear infinite;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 30%;
+  }
+  100% {
+    background-position: 1000% 500%;
+  }
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  user-select: none;
+}
+
+.time {
+  color: #d99c3b;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.time span {
+  padding: 0 14px;
+  font-size: 0.8rem;
+}
+
+.time span div {
+  font-size: 3rem;
+}
+
+@media (max-width: 740px) {
+  .label {
+    font-size: 1.7rem;
+  }
+  .time span {
+    padding: 0 16px;
+    font-size: 0.6rem;
+  }
+  .time span div {
+    font-size: 2rem;
+  }
+}
+
+#contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  box-sizing: border-box;
+}
+
+#mensaje {
+    font-size: 2rem;
+    font-family: "Carter One", serif;
+    text-align: center;
+    color: red; /* Cambiar color del texto a rojo */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 85%;
+    word-wrap: break-word;
+    overflow: hidden;
+    /* Borde blanco alrededor de las letras */
+    text-shadow:
+      1px 1px 0px white,
+      -1px -1px 0px white,
+      1px -1px 0px white,
+      -1px 1px 0px white;
+  }
+
+#contenedor3 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+#contenedor2, #contenedor4 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Estilos para el mensaje2 con una fuente más gruesa */
+#mensaje2 {
+  color: #2e8b57; /* Color verde para el texto */
+  font-size: 1.9rem;
+  font-family: 'Poppins', sans-serif; /* Fuente más gruesa */
+  font-weight: 700; /* Usando bold */
+  padding: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  overflow: hidden;
+
+  /* Efecto de borde blanco alrededor de cada letra */
+  text-shadow:
+    1px 1px 0px white,
+    -1px -1px 0px white,
+    1px -1px 0px white,
+    -1px 1px 0px white;
+}
+
+/* Estilos para el mensaje3 */
+#mensaje3 {
+    color: rgb(238, 255, 0); /* Cambiar color a azul */
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif; /* Nueva fuente para el mensaje 3 */
+    padding: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    overflow: hidden;
+    /* Borde blanco alrededor de las letras */
+    text-shadow:
+      1px 1px 0px rgb(0, 0, 0),
+      -1px -1px 0px rgb(0, 0, 0),
+      1px -1px 0px rgb(0, 0, 0),
+      -1px 1px 0px rgb(0, 0, 0);
+  }
+
+  #contenedor4 {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    width: 100%; /* Ensures full width */
+    margin-top: 20px;
+  }
+
+  #contenedor4 button {
+    font-size: 1.6rem;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: auto; /* Remove fixed width to allow sharing space */
+  }
+
+/* Efecto de hover para los botones */
+#contenedor4 button:hover,
+#contenedor5 button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn.btn-danger {
+    margin-left: -150px; /* Ajusta el valor según necesites */
+  }
+  .btn.btn-dark {
+    margin-right: -150px; /* Ajusta el valor según necesites */
+  }
+#noButton{
+    position: absolute; /* Necesario para moverlo libremente dentro de la ventana */
+    cursor: pointer;
+  }
+
+  .cuenta-regresiva {
+    font-size: 10rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 2; /* Mantiene el texto encima del borde */
+}
+
+.borde-giratorio {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 15rem;
+    height: 15rem;
+    border: 5px solid #fff;
+    margin-left: -7.5rem;
+    margin-top: -7.5rem;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    animation: 1s rotate infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+/* Ajuste para que el contador siempre esté centrado */
+#contadorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Asegura que ocupe toda la pantalla */
+}

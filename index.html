@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Navidad Milagros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-dark d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+    <audio id="background-audio" loop autoplay>
+        <source src="campana.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+
+    <div class="text-center">
+        <img src="zapato.png" alt="Zapato" class="img-fluid mb-4" style="max-width: 200px;">
+        
+        <h2 class="mb-4" style="color: white;">¿ESTÁS LISTA?</h2>
+        
+        <div class="d-flex justify-content-center">
+            <button id="yesButton" class="btn btn-success mx-2">¡Claro!</button>
+            <button id="noButton" class="btn btn-danger mx-2">¿Aún no? 🙈</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="noModal" tabindex="-1" aria-labelledby="noModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="noModalLabel">¡Ups! 😱</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Segura de que no estás lista para el gran momento? 🤔🎁<br>
+                    ¡Lo emocionante está por comenzar! 🌟</p>
+                    <p>Cuando te encuentres preparada podras continuar y ver algo lindo. 😊💖</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">¡Vamos, intentémoslo de nuevo! 🚀</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/fireworks.min.js"></script>
+
+</body>
+</html>
